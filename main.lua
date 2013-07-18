@@ -34,10 +34,10 @@
 --*********************************************************************************************
 
 -- Require the widget library
-local widget = require("widget");
+local widget = require( "widget" )
 
 -- Set the status bar to show the default iOS status bar
-display.setStatusBar( display.DefaultStatusBar )
+display.setStatusBar( display.HiddenStatusBar )
 
 -- Display a background.
 local background = display.newImage( "background.png", true )
@@ -48,7 +48,7 @@ background.y = display.contentCenterY
 local toolbarGradient = graphics.newGradient( {168, 181, 198, 255 }, {139, 157, 180, 255}, "down" )
 
 -- Create toolbar to go at the top of the screen
-local titleBar = display.newRect( 0, display.statusBarHeight, display.contentWidth, 44 )
+local titleBar = display.newRect( 0, 0, display.contentWidth, 44 )
 titleBar:setFillColor( toolbarGradient )
 
 -- Create embossed text to go on the toolbar
